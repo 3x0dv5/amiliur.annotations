@@ -9,6 +9,7 @@
 	    <Authors>Rui Lima</Authors>
 	    <Product>amiliur</Product>
 	    <SignAssembly>False</SignAssembly>
+        <PackageId>amiliur.annotations</PackageId>
 	    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 	    <PackageProjectUrl>https://github.com/ruilimacom/amiliur.annotations</PackageProjectUrl>
 	    <Copyright>MIT License</Copyright>
@@ -17,6 +18,7 @@
 	    <PackageTags>annotations, validation</PackageTags>
 	    <PackageLicenseFile>LICENSE</PackageLicenseFile>
 	    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+        <Description>Annotations for .NET, this annotations allows the creation of complex validations.</Description>
 	    <Version>0.1.0</Version>
     </PropertyGroup>
 
