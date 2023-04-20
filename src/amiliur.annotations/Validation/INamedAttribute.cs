@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using amiliur.annotations.Extensions;
 
 namespace amiliur.annotations.Validation;
 
@@ -16,16 +15,5 @@ public abstract class NamedValidationAttribute : Attribute
     {
         return IsValid(value, validationContext);
     }
-    // protected bool IsUsedInCompositeAttribute(ValidationContext validationContext)
-    // {
-    //     if (validationContext.MemberName != null)
-    //     {
-    //         var property = validationContext.GetObjectProperty(validationContext.MemberName);
-    //         return property
-    //             .GetCustomAttributes(typeof(CompositeAttribute), false)
-    //             .OfType<CompositeAttribute>()
-    //             .Any(attr => attr.AttributeList != null && attr.AttributeList.Contains(Name));
-    //     }
-    //     return false;
-    // }
+  
 }
