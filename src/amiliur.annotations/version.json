@@ -1,0 +1,26 @@
+{
+  "version": "8.0",
+  "publicReleaseRefSpec": [
+    "^refs/heads/main$",
+    "^refs/heads/develop$"
+  ],
+  "cloudBuild": {
+    "buildNumber": {
+      "enabled": true
+    }
+  },
+  "branches": {
+    "main": {
+      "versionIncrement": "minor",
+      "firstUnstableTag": null,
+      "tag": "v{version}"
+    },
+    "develop": {
+      "baseVersion": "8.0",
+      "versionIncrement": "patch",
+      "firstUnstableTag": "preview-3",
+      "tag": "v{version}"
+    }
+  }
+}
+
