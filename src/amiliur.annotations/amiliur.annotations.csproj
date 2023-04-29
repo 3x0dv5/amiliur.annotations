@@ -17,9 +17,6 @@
 	    <PackageLicenseFile>LICENSE</PackageLicenseFile>
 	    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
         <Description>Annotations for .NET, this annotations allows the creation of complex validations.</Description>
-        <AssemblyVersion>$(AssemblyVersion)</AssemblyVersion>
-        <FileVersion>$(AssemblyVersion)</FileVersion>
-	    <Version>$(AssemblyVersion)</Version>
     </PropertyGroup>
 
     <ItemGroup>
