@@ -9,17 +9,19 @@
       "enabled": true
     }
   },
-  "branches": {
-    "main": {
+  "branches": [
+    {
+      "name": "main",
       "versionIncrement": "minor",
       "firstUnstableTag": null,
       "tag": "v{version}"
     },
-    "develop": {
+    {
+      "name": "develop",
       "baseVersion": "0.2",
       "versionIncrement": "patch",
       "firstUnstableTag": "preview.{height}",
       "tag": "v{version}"
     }
-  }
+  ]
 }
