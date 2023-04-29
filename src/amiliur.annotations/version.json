@@ -1,27 +1,11 @@
 {
-  "version": "0.1",
+  "version": "0.1-preview",
   "publicReleaseRefSpec": [
     "^refs/heads/main$",
     "^refs/heads/develop$"
   ],
   "cloudBuild": {
-    "buildNumber": {
-      "enabled": true
-    }
-  },
-  "branches": [
-    {
-      "name": "main",
-      "versionIncrement": "minor",
-      "firstUnstableTag": null,
-      "tag": "v{version}"
-    },
-    {
-      "name": "develop",
-      "baseVersion": "0.2",
-      "versionIncrement": "patch",
-      "firstUnstableTag": "preview.{height}",
-      "tag": "v{version}"
-    }
-  ]
+    "setAllVariables": true,
+    "setVersionVariables": true
+  }
 }
