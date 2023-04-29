@@ -23,12 +23,6 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
 
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
-
-    - name: Test
-      run: dotnet test --no-build --verbosity normal
-
     - name: Nerdbank.GitVersioning
       uses: dotnet/nbgv@master
       id: nbgv
@@ -37,6 +31,15 @@ jobs:
     - run:
         echo 'SemVer2=${{ steps.nbgv.outputs.SemVer2 }}'
 
+    - name: Build
+      run: dotnet build --no-restore
+      
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    
     - name: Publish to NuGet
       run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
       working-directory: './src/amiliur.annotations/'
