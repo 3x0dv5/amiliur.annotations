@@ -1,5 +1,5 @@
 {
-  "version": "8.0",
+  "version": "0.1",
   "publicReleaseRefSpec": [
     "^refs/heads/main$",
     "^refs/heads/develop$"
@@ -16,11 +16,10 @@
       "tag": "v{version}"
     },
     "develop": {
-      "baseVersion": "8.0",
+      "baseVersion": "0.2",
       "versionIncrement": "patch",
-      "firstUnstableTag": "preview-3",
+      "firstUnstableTag": "preview.{height}",
       "tag": "v{version}"
     }
   }
 }
-
