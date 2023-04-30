@@ -5,7 +5,7 @@ on:
     branches:
       - 'release/*'
       - 'main'
-
+      
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -34,7 +34,11 @@ jobs:
 
     - name: Build
       run: dotnet build --configuration Release --no-restore
+
+    - name: Pack projects
+      run: dotnet pack --configuration Release --output ./output/
+      working-directory: './'
     
-    - name: Publish amiliur.annotations to NuGet
+    - name: Publish to NuGet
       run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
-      working-directory: './src/amiliur.annotations/'
+      working-directory: './output/'
