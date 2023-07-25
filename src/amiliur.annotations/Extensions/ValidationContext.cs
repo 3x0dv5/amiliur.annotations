@@ -2,14 +2,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.Reflection;
 
-namespace amiliur.annotations.Extensions
+namespace amiliur.annotations.Extensions;
+
+internal static class ValidationContextExtensions
 {
-    internal static class ValidationContextExtensions
+    internal static PropertyInfo GetObjectProperty(this ValidationContext ctx, string propertyName)
     {
-        internal static PropertyInfo GetObjectProperty(this ValidationContext ctx, string propertyName)
-        {
-            var property = ctx.ObjectType.GetProperty(propertyName);
-            return property == null ? throw new PropertyNotFoundException(propertyName) : property;
-        }
+        var property = ctx.ObjectType.GetProperty(propertyName);
+        return property == null ? throw new PropertyNotFoundException(propertyName) : property;
     }
 }
