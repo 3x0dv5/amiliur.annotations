@@ -9,15 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-<<<<<<< HEAD
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.2" />
     <PackageReference Include="xunit" Version="2.5.0-pre.11" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.0-pre.15">
-=======
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.0-preview.23280.1" />
-    <PackageReference Include="xunit" Version="2.5.0-pre.26" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.0-pre.20">
->>>>>>> 0d085e8baa6eb44b5bd94890c2f57a00f0a12147
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
